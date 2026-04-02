@@ -1,4 +1,6 @@
-// Utility functions for working with RMLUI source code
+// Utility functions for extracting and loading RmlUi stylesheet support data.
+
+import fs from 'node:fs';
 
 export type Property = {
     id: string;
@@ -91,6 +93,17 @@ export type Selector = {
     selector: string;
 };
 
+export type RmluiSupportData = {
+    schemaVersion: number;
+    generatedAt: string;
+    generatedFrom: {
+        sourcePath: string;
+    };
+    properties: Property[];
+    shorthands: Shorthand[];
+    selectors: Selector[];
+};
+
 // {"nth-child", StructuralSelectorType::Nth_Child},
 const SELECTOR_REGEX = /{\s*"([^"]+)"\s*,\s*StructuralSelectorType::(\w+)\s*}/gm;
 // Additional selectors that are not registered in the factory but are still supported by RMLUI, these ids are made up btw
@@ -127,6 +140,11 @@ export function extractSelectors(content: string) {
         });
     }
     return selectors;
+}
+
+export function loadSupportData(filePath: string): RmluiSupportData {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    return JSON.parse(content) as RmluiSupportData;
 }
 
 /*

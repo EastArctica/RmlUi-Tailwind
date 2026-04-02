@@ -1,0 +1,981 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-04-02T21:03:53.688Z",
+  "generatedFrom": {
+    "sourcePath": "rmlui-src"
+  },
+  "properties": [
+    {
+      "id": "MarginTop",
+      "name": "margin-top",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "MarginRight",
+      "name": "margin-right",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "MarginBottom",
+      "name": "margin-bottom",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "MarginLeft",
+      "name": "margin-left",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "PaddingTop",
+      "name": "padding-top",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "PaddingRight",
+      "name": "padding-right",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "PaddingBottom",
+      "name": "padding-bottom",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "PaddingLeft",
+      "name": "padding-left",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "BorderTopWidth",
+      "name": "border-top-width",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "BorderRightWidth",
+      "name": "border-right-width",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "BorderBottomWidth",
+      "name": "border-bottom-width",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "BorderLeftWidth",
+      "name": "border-left-width",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "BorderTopColor",
+      "name": "border-top-color",
+      "defaultValue": "black",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "BorderRightColor",
+      "name": "border-right-color",
+      "defaultValue": "black",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "BorderBottomColor",
+      "name": "border-bottom-color",
+      "defaultValue": "black",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "BorderLeftColor",
+      "name": "border-left-color",
+      "defaultValue": "black",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "BorderTopLeftRadius",
+      "name": "border-top-left-radius",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "BorderTopRightRadius",
+      "name": "border-top-right-radius",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "BorderBottomRightRadius",
+      "name": "border-bottom-right-radius",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "BorderBottomLeftRadius",
+      "name": "border-bottom-left-radius",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Display",
+      "name": "display",
+      "defaultValue": "inline",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "Position",
+      "name": "position",
+      "defaultValue": "static",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "Top",
+      "name": "top",
+      "defaultValue": "auto",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Right",
+      "name": "right",
+      "defaultValue": "auto",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Bottom",
+      "name": "bottom",
+      "defaultValue": "auto",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Left",
+      "name": "left",
+      "defaultValue": "auto",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Float",
+      "name": "float",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "Clear",
+      "name": "clear",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "BoxSizing",
+      "name": "box-sizing",
+      "defaultValue": "content-box",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "ZIndex",
+      "name": "z-index",
+      "defaultValue": "auto",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Width",
+      "name": "width",
+      "defaultValue": "auto",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "MinWidth",
+      "name": "min-width",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "MaxWidth",
+      "name": "max-width",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "Height",
+      "name": "height",
+      "defaultValue": "auto",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "MinHeight",
+      "name": "min-height",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "MaxHeight",
+      "name": "max-height",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "LineHeight",
+      "name": "line-height",
+      "defaultValue": "1.2",
+      "inherited": true,
+      "forces_layout": true
+    },
+    {
+      "id": "VerticalAlign",
+      "name": "vertical-align",
+      "defaultValue": "baseline",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "OverflowX",
+      "name": "overflow-x",
+      "defaultValue": "visible",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "OverflowY",
+      "name": "overflow-y",
+      "defaultValue": "visible",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "Clip",
+      "name": "clip",
+      "defaultValue": "auto",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Visibility",
+      "name": "visibility",
+      "defaultValue": "visible",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "TextOverflow",
+      "name": "text-overflow",
+      "defaultValue": "clip",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "BackgroundColor",
+      "name": "background-color",
+      "defaultValue": "transparent",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Color",
+      "name": "color",
+      "defaultValue": "white",
+      "inherited": true,
+      "forces_layout": false
+    },
+    {
+      "id": "CaretColor",
+      "name": "caret-color",
+      "defaultValue": "auto",
+      "inherited": true,
+      "forces_layout": false
+    },
+    {
+      "id": "ImageColor",
+      "name": "image-color",
+      "defaultValue": "white",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Opacity",
+      "name": "opacity",
+      "defaultValue": "1",
+      "inherited": true,
+      "forces_layout": false
+    },
+    {
+      "id": "FontFamily",
+      "name": "font-family",
+      "defaultValue": "",
+      "inherited": true,
+      "forces_layout": true
+    },
+    {
+      "id": "FontStyle",
+      "name": "font-style",
+      "defaultValue": "normal",
+      "inherited": true,
+      "forces_layout": true
+    },
+    {
+      "id": "FontWeight",
+      "name": "font-weight",
+      "defaultValue": "normal",
+      "inherited": true,
+      "forces_layout": true
+    },
+    {
+      "id": "FontSize",
+      "name": "font-size",
+      "defaultValue": "12px",
+      "inherited": true,
+      "forces_layout": true
+    },
+    {
+      "id": "FontKerning",
+      "name": "font-kerning",
+      "defaultValue": "auto",
+      "inherited": true,
+      "forces_layout": true
+    },
+    {
+      "id": "LetterSpacing",
+      "name": "letter-spacing",
+      "defaultValue": "normal",
+      "inherited": true,
+      "forces_layout": true
+    },
+    {
+      "id": "TextAlign",
+      "name": "text-align",
+      "defaultValue": "left",
+      "inherited": true,
+      "forces_layout": true
+    },
+    {
+      "id": "TextDecoration",
+      "name": "text-decoration",
+      "defaultValue": "none",
+      "inherited": true,
+      "forces_layout": false
+    },
+    {
+      "id": "TextTransform",
+      "name": "text-transform",
+      "defaultValue": "none",
+      "inherited": true,
+      "forces_layout": true
+    },
+    {
+      "id": "WhiteSpace",
+      "name": "white-space",
+      "defaultValue": "normal",
+      "inherited": true,
+      "forces_layout": true
+    },
+    {
+      "id": "WordBreak",
+      "name": "word-break",
+      "defaultValue": "normal",
+      "inherited": true,
+      "forces_layout": true
+    },
+    {
+      "id": "RowGap",
+      "name": "row-gap",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "ColumnGap",
+      "name": "column-gap",
+      "defaultValue": "0px",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "Cursor",
+      "name": "cursor",
+      "defaultValue": "",
+      "inherited": true,
+      "forces_layout": false
+    },
+    {
+      "id": "Drag",
+      "name": "drag",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "TabIndex",
+      "name": "tab-index",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Focus",
+      "name": "focus",
+      "defaultValue": "auto",
+      "inherited": true,
+      "forces_layout": false
+    },
+    {
+      "id": "NavUp",
+      "name": "nav-up",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "NavRight",
+      "name": "nav-right",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "NavDown",
+      "name": "nav-down",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "NavLeft",
+      "name": "nav-left",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "ScrollbarMargin",
+      "name": "scrollbar-margin",
+      "defaultValue": "0",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "OverscrollBehavior",
+      "name": "overscroll-behavior",
+      "defaultValue": "auto",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "PointerEvents",
+      "name": "pointer-events",
+      "defaultValue": "auto",
+      "inherited": true,
+      "forces_layout": false
+    },
+    {
+      "id": "Perspective",
+      "name": "perspective",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "PerspectiveOriginX",
+      "name": "perspective-origin-x",
+      "defaultValue": "50%",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "PerspectiveOriginY",
+      "name": "perspective-origin-y",
+      "defaultValue": "50%",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Transform",
+      "name": "transform",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "TransformOriginX",
+      "name": "transform-origin-x",
+      "defaultValue": "50%",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "TransformOriginY",
+      "name": "transform-origin-y",
+      "defaultValue": "50%",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "TransformOriginZ",
+      "name": "transform-origin-z",
+      "defaultValue": "0",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Transition",
+      "name": "transition",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Animation",
+      "name": "animation",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "Decorator",
+      "name": "decorator",
+      "defaultValue": "",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "MaskImage",
+      "name": "mask-image",
+      "defaultValue": "",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "FontEffect",
+      "name": "font-effect",
+      "defaultValue": "",
+      "inherited": true,
+      "forces_layout": false
+    },
+    {
+      "id": "Filter",
+      "name": "filter",
+      "defaultValue": "",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "BackdropFilter",
+      "name": "backdrop-filter",
+      "defaultValue": "",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "BoxShadow",
+      "name": "box-shadow",
+      "defaultValue": "none",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "FillImage",
+      "name": "fill-image",
+      "defaultValue": "",
+      "inherited": false,
+      "forces_layout": false
+    },
+    {
+      "id": "AlignContent",
+      "name": "align-content",
+      "defaultValue": "stretch",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "AlignItems",
+      "name": "align-items",
+      "defaultValue": "stretch",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "AlignSelf",
+      "name": "align-self",
+      "defaultValue": "auto",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "FlexBasis",
+      "name": "flex-basis",
+      "defaultValue": "auto",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "FlexDirection",
+      "name": "flex-direction",
+      "defaultValue": "row",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "FlexGrow",
+      "name": "flex-grow",
+      "defaultValue": "0",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "FlexShrink",
+      "name": "flex-shrink",
+      "defaultValue": "1",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "FlexWrap",
+      "name": "flex-wrap",
+      "defaultValue": "nowrap",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "JustifyContent",
+      "name": "justify-content",
+      "defaultValue": "flex-start",
+      "inherited": false,
+      "forces_layout": true
+    },
+    {
+      "id": "RmlUi_Language",
+      "name": "--rmlui-language",
+      "defaultValue": "",
+      "inherited": true,
+      "forces_layout": true
+    },
+    {
+      "id": "RmlUi_Direction",
+      "name": "--rmlui-direction",
+      "defaultValue": "auto",
+      "inherited": true,
+      "forces_layout": true
+    }
+  ],
+  "shorthands": [
+    {
+      "id": "Margin",
+      "name": "margin",
+      "components": [
+        "margin-top",
+        "margin-right",
+        "margin-bottom",
+        "margin-left"
+      ],
+      "type": "Box"
+    },
+    {
+      "id": "Padding",
+      "name": "padding",
+      "components": [
+        "padding-top",
+        "padding-right",
+        "padding-bottom",
+        "padding-left"
+      ],
+      "type": "Box"
+    },
+    {
+      "id": "BorderWidth",
+      "name": "border-width",
+      "components": [
+        "border-top-width",
+        "border-right-width",
+        "border-bottom-width",
+        "border-left-width"
+      ],
+      "type": "Box"
+    },
+    {
+      "id": "BorderColor",
+      "name": "border-color",
+      "components": [
+        "border-top-color",
+        "border-right-color",
+        "border-bottom-color",
+        "border-left-color"
+      ],
+      "type": "Box"
+    },
+    {
+      "id": "BorderTop",
+      "name": "border-top",
+      "components": [
+        "border-top-width",
+        "border-top-color"
+      ],
+      "type": "FallThrough"
+    },
+    {
+      "id": "BorderRight",
+      "name": "border-right",
+      "components": [
+        "border-right-width",
+        "border-right-color"
+      ],
+      "type": "FallThrough"
+    },
+    {
+      "id": "BorderBottom",
+      "name": "border-bottom",
+      "components": [
+        "border-bottom-width",
+        "border-bottom-color"
+      ],
+      "type": "FallThrough"
+    },
+    {
+      "id": "BorderLeft",
+      "name": "border-left",
+      "components": [
+        "border-left-width",
+        "border-left-color"
+      ],
+      "type": "FallThrough"
+    },
+    {
+      "id": "Border",
+      "name": "border",
+      "components": [
+        "border-top",
+        "border-right",
+        "border-bottom",
+        "border-left"
+      ],
+      "type": "RecursiveRepeat"
+    },
+    {
+      "id": "BorderRadius",
+      "name": "border-radius",
+      "components": [
+        "border-top-left-radius",
+        "border-top-right-radius",
+        "border-bottom-right-radius",
+        "border-bottom-left-radius"
+      ],
+      "type": "Box"
+    },
+    {
+      "id": "Inset",
+      "name": "inset",
+      "components": [
+        "top",
+        "right",
+        "bottom",
+        "left"
+      ],
+      "type": "Box"
+    },
+    {
+      "id": "Overflow",
+      "name": "overflow",
+      "components": [
+        "overflow-x",
+        "overflow-y"
+      ],
+      "type": "Replicate"
+    },
+    {
+      "id": "Background",
+      "name": "background",
+      "components": [
+        "background-color"
+      ],
+      "type": "FallThrough"
+    },
+    {
+      "id": "Font",
+      "name": "font",
+      "components": [
+        "font-style",
+        "font-weight",
+        "font-size",
+        "font-family"
+      ],
+      "type": "FallThrough"
+    },
+    {
+      "id": "Gap",
+      "name": "gap",
+      "components": [
+        "row-gap",
+        "column-gap"
+      ],
+      "type": "Replicate"
+    },
+    {
+      "id": "Nav",
+      "name": "nav",
+      "components": [
+        "nav-up",
+        "nav-right",
+        "nav-down",
+        "nav-left"
+      ],
+      "type": "Box"
+    },
+    {
+      "id": "PerspectiveOrigin",
+      "name": "perspective-origin",
+      "components": [
+        "perspective-origin-x",
+        "perspective-origin-y"
+      ],
+      "type": "FallThrough"
+    },
+    {
+      "id": "TransformOrigin",
+      "name": "transform-origin",
+      "components": [
+        "transform-origin-x",
+        "transform-origin-y",
+        "transform-origin-z"
+      ],
+      "type": "FallThrough"
+    },
+    {
+      "id": "Flex",
+      "name": "flex",
+      "components": [
+        "flex-grow",
+        "flex-shrink",
+        "flex-basis"
+      ],
+      "type": "Flex"
+    },
+    {
+      "id": "FlexFlow",
+      "name": "flex-flow",
+      "components": [
+        "flex-direction",
+        "flex-wrap"
+      ],
+      "type": "FallThrough"
+    }
+  ],
+  "selectors": [
+    {
+      "id": "Hover",
+      "selector": "hover"
+    },
+    {
+      "id": "Active",
+      "selector": "active"
+    },
+    {
+      "id": "Focus",
+      "selector": "focus"
+    },
+    {
+      "id": "FocusVisible",
+      "selector": "focus-visible"
+    },
+    {
+      "id": "Checked",
+      "selector": "checked"
+    },
+    {
+      "id": "Placeholder",
+      "selector": "placeholder"
+    },
+    {
+      "id": "Nth_Child",
+      "selector": "nth-child"
+    },
+    {
+      "id": "Nth_Last_Child",
+      "selector": "nth-last-child"
+    },
+    {
+      "id": "Nth_Of_Type",
+      "selector": "nth-of-type"
+    },
+    {
+      "id": "Nth_Last_Of_Type",
+      "selector": "nth-last-of-type"
+    },
+    {
+      "id": "First_Child",
+      "selector": "first-child"
+    },
+    {
+      "id": "Last_Child",
+      "selector": "last-child"
+    },
+    {
+      "id": "First_Of_Type",
+      "selector": "first-of-type"
+    },
+    {
+      "id": "Last_Of_Type",
+      "selector": "last-of-type"
+    },
+    {
+      "id": "Only_Child",
+      "selector": "only-child"
+    },
+    {
+      "id": "Only_Of_Type",
+      "selector": "only-of-type"
+    },
+    {
+      "id": "Empty",
+      "selector": "empty"
+    },
+    {
+      "id": "Not",
+      "selector": "not"
+    },
+    {
+      "id": "Scope",
+      "selector": "scope"
+    }
+  ]
+}

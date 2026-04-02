@@ -12,6 +12,7 @@
     "target": "esnext",
     "types": ["node"],
     "lib": ["esnext"],
+    "resolveJsonModule": true,
 
     // Other Outputs
     "sourceMap": true,
@@ -38,5 +39,6 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    "noEmitOnError": true,
   }
 }
