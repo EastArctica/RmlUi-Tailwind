@@ -97,7 +97,15 @@ export type RmluiSupportData = {
     schemaVersion: number;
     generatedAt: string;
     generatedFrom: {
-        sourcePath: string;
+        git: {
+            remoteUrl: string | null;
+            commit: string | null;
+            dirty: boolean | null;
+        };
+        files: Array<{
+            path: string;
+            sha256: string;
+        }>;
     };
     properties: Property[];
     shorthands: Shorthand[];

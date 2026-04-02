@@ -1,5 +1,7 @@
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import {
     extractProperties,
     extractSelectors,
@@ -9,6 +11,42 @@ import {
 
 const STYLE_SHEET_SPEC_PATH = 'Source/Core/StyleSheetSpecification.cpp';
 const STYLE_SHEET_FACTORY_PATH = 'Source/Core/StyleSheetFactory.cpp';
+
+function tryExecGit(args: string[], cwd: string) {
+    try {
+        return execFileSync('git', args, {
+            cwd,
+            encoding: 'utf-8',
+            stdio: ['ignore', 'pipe', 'ignore'],
+        }).trim();
+    } catch {
+        return null;
+    }
+}
+
+function hashFile(filePath: string) {
+    const content = fs.readFileSync(filePath);
+    return crypto.createHash('sha256').update(content).digest('hex');
+}
+
+function getGitProvenance(sourcePath: string) {
+    const repoRoot = tryExecGit(['rev-parse', '--show-toplevel'], sourcePath);
+    if (!repoRoot) {
+        return {
+            remoteUrl: null,
+            commit: null,
+            dirty: null,
+        };
+    }
+
+    const status = tryExecGit(['status', '--porcelain'], repoRoot);
+
+    return {
+        remoteUrl: tryExecGit(['remote', 'get-url', 'origin'], repoRoot),
+        commit: tryExecGit(['rev-parse', 'HEAD'], repoRoot),
+        dirty: status !== null ? status.length > 0 : null,
+    };
+}
 
 export function generateSupportData(rmluiSourcePath: string): RmluiSupportData {
     const resolvedSourcePath = path.resolve(rmluiSourcePath);
@@ -30,7 +68,17 @@ export function generateSupportData(rmluiSourcePath: string): RmluiSupportData {
         schemaVersion: 1,
         generatedAt: new Date().toISOString(),
         generatedFrom: {
-            sourcePath: resolvedSourcePath,
+            git: getGitProvenance(resolvedSourcePath),
+            files: [
+                {
+                    path: STYLE_SHEET_SPEC_PATH,
+                    sha256: hashFile(specFilePath),
+                },
+                {
+                    path: STYLE_SHEET_FACTORY_PATH,
+                    sha256: hashFile(factoryFilePath),
+                },
+            ],
         },
         properties: extractProperties(specContent),
         shorthands: extractShorthands(specContent),
