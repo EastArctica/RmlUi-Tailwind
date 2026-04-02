@@ -44,6 +44,8 @@ The `build` command uses an inline Tailwind input stylesheet by default:
 
 Provide `input` in your config or `--input` on the CLI if you need a custom source stylesheet.
 
+The package also applies a built-in `tailwind.corePlugins` baseline tuned for RmlUi. These defaults disable core plugins that generate unsupported RmlUi CSS. Your own `tailwind.corePlugins` entries are merged on top, so you can re-enable or further disable plugins per project.
+
 Option aliases:
 
 - `--help`, `-h`
@@ -82,6 +84,8 @@ export default {
   }
 }
 ```
+
+`tailwind.corePlugins` is merged with the package defaults rather than replacing them entirely.
 
 The `tailwind` field is passed through to Tailwind's config object and merged with the package's runtime-generated `content` list. This is where you should put project-specific Tailwind customization such as:
 
