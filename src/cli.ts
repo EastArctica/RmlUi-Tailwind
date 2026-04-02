@@ -59,7 +59,7 @@ function printHelp() {
 function parseArgs(argv: string[]): ParsedArgs {
     const args = [...argv];
     const first = args[0];
-    const command = first && !first.startsWith('--') ? args.shift() ?? 'build' : 'build';
+    const command = first && !first.startsWith('-') ? args.shift() ?? 'build' : 'build';
     const options = new Map<string, string[]>();
     const flags = new Set<string>();
 

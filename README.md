@@ -46,6 +46,7 @@ Provide `input` in your config or `--input` on the CLI if you need a custom sour
 
 Option aliases:
 
+- `--help`, `-h`
 - `--config`, `-c`
 - `--input`, `--in`, `-i`
 - `--output`, `--out`, `-o`
