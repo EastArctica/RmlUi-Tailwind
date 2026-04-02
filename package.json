@@ -2,6 +2,8 @@
   "name": "rmlui-tailwind",
   "version": "0.1.0",
   "description": "Generate RmlUi-compatible RCSS from Tailwind utilities",
+  "main": "dist/cli.js",
+  "types": "dist/cli.d.ts",
   "bin": {
     "rmlui-tailwind": "dist/cli.js"
   },
@@ -9,13 +11,35 @@
     ".": "./dist/cli.js"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "prepublishOnly": "pnpm run build"
   },
   "type": "module",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "rmlui",
+    "tailwind",
+    "rcss",
+    "css",
+    "cli"
+  ],
+  "author": "EastArctica",
   "license": "MIT",
   "packageManager": "pnpm@10.32.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EastArctica/rmlui-tailwind.git",
+    "directory": "tools"
+  },
+  "bugs": {
+    "url": "https://github.com/EastArctica/rmlui-tailwind/issues"
+  },
+  "homepage": "https://github.com/EastArctica/rmlui-tailwind/#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "files": [
     "dist",
     "data",
