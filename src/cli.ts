@@ -50,6 +50,7 @@ function printHelp() {
         '',
         'Generate-support options:',
         '  --rmlui-source <path>          Local RmlUi source checkout',
+        '  -o, --out, --output <path>     Output support data JSON path',
     ].join('\n');
 
     console.log(helpText);
