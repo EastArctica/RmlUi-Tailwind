@@ -2,13 +2,16 @@
   "name": "rmlui-tailwind",
   "version": "0.1.0",
   "description": "Generate RmlUi-compatible RCSS from Tailwind utilities",
-  "main": "dist/cli.js",
-  "types": "dist/cli.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
     "rmlui-tailwind": "dist/cli.js"
   },
   "exports": {
-    ".": "./dist/cli.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
