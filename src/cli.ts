@@ -9,33 +9,84 @@ import { writeTransformedCss } from './transform-css.js';
 type ParsedArgs = {
     command: string;
     options: Map<string, string[]>;
+    flags: Set<string>;
 };
+
+const OPTION_ALIASES = new Map<string, string>([
+    ['o', 'output'],
+    ['out', 'output'],
+    ['output', 'output'],
+    ['i', 'input'],
+    ['in', 'input'],
+    ['input', 'input'],
+    ['c', 'config'],
+    ['config', 'config'],
+    ['h', 'help'],
+    ['help', 'help'],
+]);
+
+function normalizeOptionName(rawName: string) {
+    return OPTION_ALIASES.get(rawName) ?? rawName;
+}
+
+function printHelp() {
+    const helpText = [
+        'rmlui-tailwind',
+        '',
+        'Commands:',
+        '  build             Generate RCSS from Tailwind utilities',
+        '  transform         Transform an existing CSS file into RCSS',
+        '  generate-support  Regenerate packaged RmlUi support data',
+        '',
+        'Common options:',
+        '  -c, --config <path>            Load a config file',
+        '  -i, --in, --input <path>       Input CSS file path',
+        '  -o, --out, --output <path>     Output RCSS file path',
+        '  -h, --help                     Show this help message',
+        '',
+        'Build options:',
+        '  --content <glob>               Content glob to scan for Tailwind classes',
+        '  --support <path>               Optional support data JSON',
+        '',
+        'Generate-support options:',
+        '  --rmlui-source <path>          Local RmlUi source checkout',
+    ].join('\n');
+
+    console.log(helpText);
+}
 
 function parseArgs(argv: string[]): ParsedArgs {
     const args = [...argv];
     const first = args[0];
     const command = first && !first.startsWith('--') ? args.shift() ?? 'build' : 'build';
     const options = new Map<string, string[]>();
+    const flags = new Set<string>();
 
     for (let index = 0; index < args.length; index += 1) {
         const token = args[index];
-        if (!token?.startsWith('--')) {
+        if (!token?.startsWith('-')) {
             throw new Error(`Unexpected argument: ${token}`);
         }
 
+        const normalizedName = normalizeOptionName(token.replace(/^-+/, ''));
+        if (normalizedName === 'help') {
+            flags.add('help');
+            continue;
+        }
+
         const value = args[index + 1];
-        if (!value || value.startsWith('--')) {
+        if (!value || value.startsWith('-')) {
             throw new Error(`Missing value for argument: ${token}`);
         }
 
-        const key = token.slice(2);
+        const key = normalizedName;
         const current = options.get(key) ?? [];
         current.push(value);
         options.set(key, current);
         index += 1;
     }
 
-    return { command, options };
+    return { command, options, flags };
 }
 
 function getOption(parsedArgs: ParsedArgs, name: string) {
@@ -111,6 +162,11 @@ function printWarnings(result: { unsupportedStyles: Map<string, string[]>; unsup
 async function main() {
     const parsedArgs = parseArgs(process.argv.slice(2));
 
+    if (parsedArgs.flags.has('help')) {
+        printHelp();
+        return;
+    }
+
     switch (parsedArgs.command) {
         case 'build': {
             const result = await buildRcss(await resolveBuildConfig(parsedArgs));
@@ -120,8 +176,8 @@ async function main() {
         case 'transform': {
             const supportFilePath = getOption(parsedArgs, 'support');
             const result = writeTransformedCss({
-                cssFilePath: path.resolve(getRequiredOption(parsedArgs, 'in')),
-                outputFilePath: path.resolve(getRequiredOption(parsedArgs, 'out')),
+                cssFilePath: path.resolve(getRequiredOption(parsedArgs, 'input')),
+                outputFilePath: path.resolve(getRequiredOption(parsedArgs, 'output')),
                 ...(supportFilePath ? { supportFilePath: path.resolve(supportFilePath) } : {}),
             });
             printWarnings(result);
@@ -129,7 +185,7 @@ async function main() {
         }
         case 'generate-support': {
             const supportData = generateSupportData(getRequiredOption(parsedArgs, 'rmlui-source'));
-            writeSupportData(getRequiredOption(parsedArgs, 'out'), supportData);
+            writeSupportData(getRequiredOption(parsedArgs, 'output'), supportData);
             return;
         }
         default:

@@ -15,15 +15,21 @@ Build directly from CLI flags:
 ```bash
 pnpx rmlui-tailwind@latest build \
   --content "./assets/ui/**/*.rml" \
-  --output ./assets/ui/tailwind.rcss
+  --out ./assets/ui/tailwind.rcss
 ```
 
 Transform an existing CSS file:
 
 ```bash
 pnpx rmlui-tailwind@latest transform \
-  --in ./tailwind.generated.css \
-  --out ./assets/ui/tailwind.rcss
+  -i ./tailwind.generated.css \
+  -o ./assets/ui/tailwind.rcss
+```
+
+Show CLI help:
+
+```bash
+pnpx rmlui-tailwind@latest --help
 ```
 
 The `build` command uses an inline Tailwind input stylesheet by default:
@@ -35,6 +41,12 @@ The `build` command uses an inline Tailwind input stylesheet by default:
 ```
 
 Provide `input` in your config or `--input` on the CLI if you need a custom source stylesheet.
+
+Option aliases:
+
+- `--config`, `-c`
+- `--input`, `--in`, `-i`
+- `--output`, `--out`, `-o`
 
 ## Config
 
@@ -77,7 +89,7 @@ To regenerate it against a local RmlUi checkout:
 ```bash
 pnpm exec tsx src/cli.ts generate-support \
   --rmlui-source /path/to/RmlUi \
-  --out data/rmlui-support.json
+  -o data/rmlui-support.json
 ```
 
 This is intended as maintainer workflow, not something consumers need during normal builds.
