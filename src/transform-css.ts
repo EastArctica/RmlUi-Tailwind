@@ -9,9 +9,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import * as csstree from 'css-tree';
 import { loadSupportData } from './utils/rmlui-src.js';
-import { fileURLToPath } from 'url';
 
-const SCRIPT_DIR = path.dirname(fileURLToPath(import.meta.url));
+const SCRIPT_DIR = __dirname;
 const DEFAULT_SUPPORT_FILE_PATH = path.resolve(SCRIPT_DIR, '../data/rmlui-support.json');
 
 export type TransformResult = {
